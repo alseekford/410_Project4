@@ -25,7 +25,7 @@ la la la
 ## LightGBM
 la la la
 ```markdown
- `mse_lgb = []
+`mse_lgb = []
 
 for i in range(5):
   kf = KFold(n_splits=10,shuffle=True,random_state=i)
@@ -48,7 +48,11 @@ for i in range(5):
     mse_lgb.append(mse(ytest, yhat_lgbm))`
 
 ```
+
 Returns
+
+<p align = 'center'><img width="518" alt="Screen Shot 2022-03-04 at 4 34 53 PM" src="https://user-images.githubusercontent.com/71660299/156844798-d2d5a511-5cad-4aeb-b59d-7c58dc434fd3.png">
+
 
 ## References
 
