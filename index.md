@@ -24,8 +24,31 @@ la la la
 
 ## LightGBM
 la la la
+```markdown
+ `mse_lgb = []
 
+for i in range(5):
+  kf = KFold(n_splits=10,shuffle=True,random_state=i)
+  # this is the Cross-Validation Loop
+  for idxtrain, idxtest in kf.split(X):
+    xtrain = X[idxtrain]
+    ytrain = y[idxtrain]
+    ytest = y[idxtest]
+    xtest = X[idxtest]
+    xtrain = scale.fit_transform(xtrain)
+    xtest = scale.transform(xtest)
+    
+    dat_train = np.concatenate([xtrain,ytrain.reshape(-1,1)],axis=1)
+    dat_test = np.concatenate([xtest,ytest.reshape(-1,1)],axis=1)
 
+    # LightGBM
+    model_lgbm = lgbm
+    model_lgbm.fit(xtrain, ytrain)
+    yhat_lgbm = model_lgbm.predict(xtest)
+    mse_lgb.append(mse(ytest, yhat_lgbm))`
+
+```
+Returns
 
 ## References
 
