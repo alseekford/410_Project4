@@ -7,7 +7,13 @@ Created and implemented my own multiple boosting algorithm to combinations of di
 
 
 ## Overview
-la la la 
+
+For project four, I created and applied a multiple boosting algorithm of my creation to two regression techniques, **X** and **Y**, on the Concrete Compressive Strength Dataset. The Concrete Compressive Strength Dataset is multivariate and our aim is to answer questions relevant to concrete in civil engineering. The 
+concrete compressive strength is a highly nonlinear function of age and ingredients. These ingredients include cement, blast furnace slag, fly ash, water, superplasticizer, coarse aggregate, and fine aggregate (Darlington, 2017). 
+
+ Although the dataset contains over fifteen columns, each a distinct characteristic of a home in Boston, I will be focusing on only four, applying multivariate regression analysis techniques. The input features will be 'rooms', 'crime', and 'distance' describing the average number of rooms per dwelling, per capita crime rate by town, and weighted distances to five Boston employment centres. The target, which will be predicted, is 'cmedv', the median value of owener-occupied homes (in thousands of dollars).
+
+
 
 ## Multiple Boosting Algorithm
 la la la 
@@ -20,6 +26,10 @@ la la la
 la la la
 
 
+
+## References
+
+Darlington, A. (2017, September 5). Concrete Compressive Strength Data Set. Kaggle. Retrieved March 4, 2022, from https://www.kaggle.com/elikplim/concrete-compressive-strength-data-set 
 
 
 ## Welcome to GitHub Pages
