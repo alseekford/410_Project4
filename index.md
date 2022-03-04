@@ -25,7 +25,7 @@ la la la
 ## LightGBM
 la la la
 ```markdown
-`mse_lgb = []
+mse_lgb = []
 
 for i in range(5):
   kf = KFold(n_splits=10,shuffle=True,random_state=i)
@@ -45,7 +45,7 @@ for i in range(5):
     model_lgbm = lgbm
     model_lgbm.fit(xtrain, ytrain)
     yhat_lgbm = model_lgbm.predict(xtest)
-    mse_lgb.append(mse(ytest, yhat_lgbm))`
+    mse_lgb.append(mse(ytest, yhat_lgbm))
 
 ```
 
