@@ -11,7 +11,7 @@ Created and implemented my own multiple boosting algorithm to combinations of di
 For project four, I created and applied a multiple boosting algorithm of my creation to two regression techniques, **X** and **Y**, on the Concrete Compressive Strength Dataset. The Concrete Compressive Strength Dataset is multivariate and our aim is to answer questions relevant to concrete in civil engineering. The 
 concrete compressive strength is a highly nonlinear function of age and ingredients. These ingredients include cement, blast furnace slag, fly ash, water, superplasticizer, coarse aggregate, and fine aggregate (Darlington, 2017). 
 
-The input features will be 'rooms', 'crime', and 'distance' describing the average number of rooms per dwelling, per capita crime rate by town, and weighted distances to five Boston employment centres. The target, which will be predicted, is 'cmedv', the median value of owener-occupied homes (in thousands of dollars).
+The input features will be 'cement', 'age', and 'superplastic' describing the cement, age - the rate of gain of strength is faster to start with and the rate gets reduced with age, and superplasticizer - used in making high-strength concrete. The target, which will be predicted, is 'strength', the median value of owener-occupied homes (in thousands of dollars).
 
 
 
