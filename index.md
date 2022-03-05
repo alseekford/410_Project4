@@ -38,7 +38,8 @@ super_yhat = super_booster(xtrain, ytrain, xtest, Tricubic, 1, model_boosting, 1
 ```
 After running this "super booster", LOWESS, Boosted LOWESS, Random Forest, and XGBOOST in a nested cross-validation loop, here are the results:
 
-<p align = 'center'><img width="696" alt="Screen Shot 2022-03-05 at 11 07 11 AM" src="https://user-images.githubusercontent.com/71660299/156891185-99ed24b9-0f50-4441-b781-4ba800d33149.png">
+<img width="696" alt="Screen Shot 2022-03-05 at 11 07 11 AM" src="https://user-images.githubusercontent.com/71660299/156891185-99ed24b9-0f50-4441-b781-4ba800d33149.png">
+
 
 
 
