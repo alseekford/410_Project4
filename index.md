@@ -18,9 +18,29 @@ The input features will be 'cement', 'age', and 'superplastic' describing the ce
 ## Multiple Boosting Algorithm
 la la la 
 ```markdown
- `some Code` text
+# MY BOOSTER
+def super_booster(X, y, xnew, kern, tau, model_boosting, nboost):
+  Fx = boosted_lwr(X,y,X,kern,tau,True)
+  Fx_new = boosted_lwr(X,y,xnew,kern,tau,True)
+  new_y = y - Fx
+  output = Fx
+  output_new = Fx_new
+  for i in range(nboost):
+    model_boosting.fit(X,new_y)
+    output += model_boosting.predict(X)
+    output_new += model_boosting.predict(xnew)
+    new_y = y - output
+  return output_new
+  
+model_boosting = RandomForestRegressor(n_estimators=100,max_depth=3)
 
+super_yhat = super_booster(xtrain, ytrain, xtest, Tricubic, 1, model_boosting, 1)
 ```
+After running this "super booster", LOWESS, Boosted LOWESS, Random Forest, and XGBOOST in a nested cross-validation loop, here are the results:
+
+<p align = 'center'><img width="696" alt="Screen Shot 2022-03-05 at 11 07 11 AM" src="https://user-images.githubusercontent.com/71660299/156891185-99ed24b9-0f50-4441-b781-4ba800d33149.png">
+
+
 
 ## LightGBM
 la la la
