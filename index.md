@@ -13,7 +13,7 @@ concrete compressive strength is a highly nonlinear function of age and ingredie
 
 Snippet of Dataset:
 
-<img width="517" alt="Screen Shot 2022-03-05 at 7 51 03 PM" src="https://user-images.githubusercontent.com/71660299/156904631-478a1cf1-e5d2-460c-a629-8a3ecdd8af17.png">
+<p align = 'center'><img width="517" alt="Screen Shot 2022-03-05 at 7 51 03 PM" src="https://user-images.githubusercontent.com/71660299/156904631-478a1cf1-e5d2-460c-a629-8a3ecdd8af17.png">
 
 The input features will be 'cement', 'age', and 'superplastic' describing the cement, age - the rate of gain of strength is faster to start with and the rate gets reduced with age, and superplasticizer - used in making high-strength concrete. The target, which will be predicted, is 'strength', the median value of owener-occupied homes (in thousands of dollars).
 
