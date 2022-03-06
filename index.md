@@ -44,6 +44,8 @@ After running this "super booster", LOWESS, Boosted LOWESS, Random Forest, and X
 
 <img width="696" alt="Screen Shot 2022-03-05 at 11 07 11 AM" src="https://user-images.githubusercontent.com/71660299/156891185-99ed24b9-0f50-4441-b781-4ba800d33149.png">
 
+  
+It is clear that the boosted algorithms performed much better than the others. Although, the Boosted Locally Weighted Linear Regression Model resulted in a slightly lower MSE resulting in a better result than the "super booster". 
 
 
 
@@ -77,6 +79,8 @@ for i in range(5):
 Returns
 
 <p align = 'center'><img width="518" alt="Screen Shot 2022-03-04 at 4 34 53 PM" src="https://user-images.githubusercontent.com/71660299/156844798-d2d5a511-5cad-4aeb-b59d-7c58dc434fd3.png">
+  
+Clearly, LightGBM outpreformed all regression models and boosted regressors. 
 
 
 ## References
