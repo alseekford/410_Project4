@@ -20,29 +20,21 @@ The input features will be 'cement', 'age', and 'superplastic' describing the ce
 
 
 ## Multiple Boosting Algorithm
-
-```markdown
-# MY BOOSTER
-def super_booster(X, y, xnew, kern, tau, model_boosting, nboost):
-  Fx = boosted_lwr(X,y,X,kern,tau,True)
-  Fx_new = boosted_lwr(X,y,xnew,kern,tau,True)
-  new_y = y - Fx
-  output = Fx
-  output_new = Fx_new
-  for i in range(nboost):
-    model_boosting.fit(X,new_y)
-    output += model_boosting.predict(X)
-    output_new += model_boosting.predict(xnew)
-    new_y = y - output
-  return output_new
   
-model_boosting = RandomForestRegressor(n_estimators=100,max_depth=3)
+  
+<p align = 'center'><img width="533" alt="Screen Shot 2022-03-10 at 6 05 37 PM" src="https://user-images.githubusercontent.com/71660299/157770032-5e8a1938-6bf6-40b7-a989-632fc3cc5a29.png">
+<p align = 'center'><img width="471" alt="Screen Shot 2022-03-10 at 6 05 57 PM" src="https://user-images.githubusercontent.com/71660299/157770053-426045af-79ae-4946-8bc4-66f74ef9cf1e.png">
+<p align = 'center'><img width="565" alt="Screen Shot 2022-03-10 at 6 06 39 PM" src="https://user-images.githubusercontent.com/71660299/157770117-7b580972-7111-486a-b927-6102a5143c9f.png">
 
-super_yhat = super_booster(xtrain, ytrain, xtest, Tricubic, 1, model_boosting, 1)
-```
-After running this "super booster", LOWESS, Boosted LOWESS, Random Forest, and XGBOOST in a nested cross-validation loop, here are the results:
 
-<img width="696" alt="Screen Shot 2022-03-05 at 11 07 11 AM" src="https://user-images.githubusercontent.com/71660299/156891185-99ed24b9-0f50-4441-b781-4ba800d33149.png">
+After running this "super booster", LOWESS, Boosted LOWESS, Random Forest, and XGBOOST in a nested cross-validation loop: 
+  
+<p align = 'center'><img width="971" alt="Screen Shot 2022-03-10 at 6 08 19 PM" src="https://user-images.githubusercontent.com/71660299/157770308-915b35ed-ef86-4480-9b23-361290d4fb13.png">
+
+  
+  Here are the results:
+
+<p align = 'center'><img width="696" alt="Screen Shot 2022-03-05 at 11 07 11 AM" src="https://user-images.githubusercontent.com/71660299/156891185-99ed24b9-0f50-4441-b781-4ba800d33149.png">
 
   
 It is clear that the boosted algorithms performed much better than the others. Although, the Boosted Locally Weighted Linear Regression Model resulted in a slightly lower MSE resulting in a better result than the "super booster". 
@@ -58,6 +50,7 @@ LightGBM is a gradient-boosting framework that utilizes a vertically-based tree 
   - boosting: defines the type of algorithm running (can choose traditional Gradient Boosting Decision Tree (gbdt), Random Forest (rf), etc.)
   
 
+Here is the K-fold cross validation loop I ran on the LightGBM model: 
   
 ```markdown
 mse_lgb = []
