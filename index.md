@@ -20,7 +20,7 @@ The input features will be 'cement', 'age', and 'superplastic' describing the ce
 
 
 ## Multiple Boosting Algorithm
-la la la 
+
 ```markdown
 # MY BOOSTER
 def super_booster(X, y, xnew, kern, tau, model_boosting, nboost):
@@ -50,7 +50,15 @@ It is clear that the boosted algorithms performed much better than the others. A
 
 
 ## LightGBM
-la la la
+
+LightGBM is a gradient-boosting framework that utilizes a vertically-based tree structure learning algorithm. Due to the vertical flow, LightGBM can significantly outperform XGBoost and other regressors in terms of both computational speed and memory consumption (Guolin et al.). With that being said however, LightGBM is sensitive to overfitting, and is recommended to be used on larger datasets. There is a variety of parameters to include to improve results, a few examples including (Mandot, 2018): 
+  - learning_rate: determines the impact each tree has on the final outcome
+  - num_leaves: number of leaves in a full tree (31 is default)
+  - num_boost_round: number of boosting iterations
+  - boosting: defines the type of algorithm running (can choose traditional Gradient Boosting Decision Tree (gbdt), Random Forest (rf), etc.)
+  
+
+  
 ```markdown
 mse_lgb = []
 
@@ -73,7 +81,6 @@ for i in range(5):
     model_lgbm.fit(xtrain, ytrain)
     yhat_lgbm = model_lgbm.predict(xtest)
     mse_lgb.append(mse(ytest, yhat_lgbm))
-
 ```
 
 Returns
@@ -86,6 +93,10 @@ Clearly, LightGBM outpreformed all regression models and boosted regressors.
 ## References
 
 Darlington, A. (2017, September 5). Concrete Compressive Strength Data Set. Kaggle. Retrieved March 4, 2022, from https://www.kaggle.com/elikplim/concrete-compressive-strength-data-set 
+  
+Guolin, et al. (n.d.). LightGBM: A highly efficient gradient boosting decision tree. Retrieved March 10, 2022, from https://papers.nips.cc/paper/2017/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf 
+  
+Mandot, P. (2018, December 1). What is LIGHTGBM, how to implement it? how to fine tune the parameters? Medium. Retrieved March 10, 2022, from https://medium.com/@pushkarmandot/https-medium-com-pushkarmandot-what-is-lightgbm-how-to-implement-it-how-to-fine-tune-the-parameters-60347819b7fc 
 
 
 ## Support or Contact
