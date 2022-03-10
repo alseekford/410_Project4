@@ -50,37 +50,15 @@ LightGBM is a gradient-boosting framework that utilizes a vertically-based tree 
   - boosting: defines the type of algorithm running (can choose traditional Gradient Boosting Decision Tree (gbdt), Random Forest (rf), etc.)
   
 
-Here is the K-fold cross validation loop I ran on the LightGBM model: 
+After calling the LightGBM regressor, here is the K-fold cross validation loop I ran on the LightGBM model: 
   
-```markdown
-mse_lgb = []
+<p align = 'center'><img width="517" alt="Screen Shot 2022-03-10 at 6 10 16 PM" src="https://user-images.githubusercontent.com/71660299/157770539-28ee9a18-97ed-4d93-bc15-17659fb1fc15.png">
 
-for i in range(5):
-  kf = KFold(n_splits=10,shuffle=True,random_state=i)
-  # this is the Cross-Validation Loop
-  for idxtrain, idxtest in kf.split(X):
-    xtrain = X[idxtrain]
-    ytrain = y[idxtrain]
-    ytest = y[idxtest]
-    xtest = X[idxtest]
-    xtrain = scale.fit_transform(xtrain)
-    xtest = scale.transform(xtest)
-    
-    dat_train = np.concatenate([xtrain,ytrain.reshape(-1,1)],axis=1)
-    dat_test = np.concatenate([xtest,ytest.reshape(-1,1)],axis=1)
-
-    # LightGBM
-    model_lgbm = lgbm
-    model_lgbm.fit(xtrain, ytrain)
-    yhat_lgbm = model_lgbm.predict(xtest)
-    mse_lgb.append(mse(ytest, yhat_lgbm))
-```
-
-Returns
+LightGBM Returns
 
 <p align = 'center'><img width="518" alt="Screen Shot 2022-03-04 at 4 34 53 PM" src="https://user-images.githubusercontent.com/71660299/156844798-d2d5a511-5cad-4aeb-b59d-7c58dc434fd3.png">
   
-Clearly, LightGBM outpreformed all regression models and boosted regressors. 
+### Clearly, LightGBM outpreformed all regression models and boosted regressors. 
 
 
 ## References
