@@ -25,6 +25,7 @@ Snippet of Dataset:
 <p align = 'center'><img width="533" alt="Screen Shot 2022-03-10 at 6 05 37 PM" src="https://user-images.githubusercontent.com/71660299/157770032-5e8a1938-6bf6-40b7-a989-632fc3cc5a29.png">
 <p align = 'center'><img width="471" alt="Screen Shot 2022-03-10 at 6 05 57 PM" src="https://user-images.githubusercontent.com/71660299/157770053-426045af-79ae-4946-8bc4-66f74ef9cf1e.png">
 <p align = 'center'><img width="565" alt="Screen Shot 2022-03-10 at 6 06 39 PM" src="https://user-images.githubusercontent.com/71660299/157770117-7b580972-7111-486a-b927-6102a5143c9f.png">  
+  
   After running this "super booster", LOWESS, Boosted LOWESS, Random Forest, and XGBOOST in a nested cross-validation loop: 
   
 <p align = 'center'><img width="971" alt="Screen Shot 2022-03-10 at 6 08 19 PM" src="https://user-images.githubusercontent.com/71660299/157770308-915b35ed-ef86-4480-9b23-361290d4fb13.png">  
