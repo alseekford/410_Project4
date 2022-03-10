@@ -33,6 +33,7 @@ Snippet of Dataset:
 <p align = 'center'><img width="971" alt="Screen Shot 2022-03-10 at 6 08 19 PM" src="https://user-images.githubusercontent.com/71660299/157770308-915b35ed-ef86-4480-9b23-361290d4fb13.png">
 
 <p align = 'center'><img width="696" alt="Screen Shot 2022-03-05 at 11 07 11 AM" src="https://user-images.githubusercontent.com/71660299/156891185-99ed24b9-0f50-4441-b781-4ba800d33149.png">  
+  
   It is clear that the boosted algorithms performed much better than the others. Although, the Boosted Locally Weighted Linear Regression Model resulted in a slightly lower MSE resulting in a better result than the "super booster".  
   
   ## LightGBM
